@@ -10,7 +10,7 @@ Professor: Henrique Leitão
 
 <h2> Descrição </h2>
 
-O objetivo deste projeto é modelar um sistema para uma biblioteca que realize cadastro de alunos e orientadores para acompanhamento do projeto de TCC.
+O objetivo deste projeto é modelar um sistema que realize cadastro de alunos e orientadores para acompanhamento do projeto de TCC.
 
 Para isso, precisa haver o cadastro de três entidades principais:
 - O aluno, que é quem está desenvolvendo o projeto de TCC
