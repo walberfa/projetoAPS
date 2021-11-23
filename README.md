@@ -41,7 +41,7 @@ Para isso, precisa haver o cadastro de três entidades principais:
 
 - [x] Definição do Sistema e Planejamento: 09/11
     - [x] Ideação e criação do repositório
-    - [ ] Diagrama de casos de uso
+    - [x] Diagrama de casos de uso
     - [x] Requisitos Funcionais e Não Funcionais
 - [ ] Diagrama de Classe e Implementação da Tela de Login: 22/11
 - [ ] CRUD Aluno e Diagrama de Sequência: 06/12
