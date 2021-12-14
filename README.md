@@ -1,6 +1,6 @@
 <h1> TCCZando </h1>
 
-Projeto da Etapa1 da disciplina de Análise e Projeto de Sistemas
+Projeto da disciplina de Análise e Projeto de Sistemas
 
 Ciência da Computação 2021.2
 
@@ -43,6 +43,6 @@ Para isso, precisa haver o cadastro de três entidades principais:
     - [x] Ideação e criação do repositório
     - [x] Diagrama de casos de uso
     - [x] Requisitos Funcionais e Não Funcionais
-- [ ] Diagrama de Classe e Implementação da Tela de Login: 22/11
+- [x] Diagrama de Classe e Implementação da Tela de Login: 22/11
 - [ ] CRUD Aluno e Diagrama de Sequência: 06/12
 - [ ] CRUD Orientador e Projeto e Diagramas de Sequência: 20/12
