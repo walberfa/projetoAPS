@@ -19,8 +19,13 @@ struct prof{
     int status;
 };
 
+struct doc{
+    char tema[20];
+    int status,id_aluno,id_orientador;
+};
 
-void TelaLogin(){
+
+void FazerLogin(){
 
     char login[15] = "wbr42";
     char login1[15];
@@ -64,7 +69,7 @@ void MostrarMenu(){
 }
 
 /*Criacao dos arquivos*/
-    FILE *aluno,*professor,*tcc;
+    FILE *aluno,*professor,*projeto;
 
 void CadastroAlunos(){
 
@@ -107,7 +112,7 @@ void CadastroAlunos(){
         fprintf(aluno,"Nome: %s  CPF: %s  Data de Nascimento:%d/%d/%d Endereco: %s Email: %s  Telefone: %s Numero de matricula: %s Curso: %s Semestre: %d \r\n",alunos.nome,alunos.cpf,alunos.dia,alunos.mes,alunos.ano,alunos.endereco, alunos.email,alunos.telefone,aluno1.matricula,aluno1.curso,aluno1.semestre);
 
         /*Realizar um novo cadastro*/
-        printf("\nEntre com o nome (se não, digite FIM): ");
+        printf("\nEntre com o novo nome (se não, digite FIM): ");
         scanf("%s",alunos.nome);
     }
 
@@ -150,11 +155,11 @@ void CadastroProfessores(){
         printf("Entre com o status: ");
         scanf("%d",&prof1.status);        
 
-        /*Gravacaoo de dados no arquivo professor.txt*/
+        /*Gravacaoo de dados no arquivo aluno.txt*/
         fprintf(professor,"Nome: %s  CPF: %s  Data de Nascimento:%d/%d/%d Endereco: %s Email: %s  Telefone: %s Numero do Siape: %s Status: %d \r\n",prof.nome,prof.cpf,prof.dia,prof.mes,prof.ano,prof.endereco, prof.email,prof.telefone,prof1.siape,prof1.status);
 
         /*Realizar um novo cadastro*/
-        printf("\nEntre com o nome (se não, digite FIM): ");
+        printf("\nEntre com o novo nome (se não, digite FIM): ");
         scanf("%s",prof.nome);
     }
 
@@ -166,7 +171,36 @@ void CadastroProfessores(){
 
 void CadastroProjetos(){
 
-    printf("\n\nAdicione os dados do TCC\n");
+    struct doc tcc;
+
+    /*Arquivos onde serao armazenados os dados*/
+    projeto = fopen("tcc.txt", "a+");
+
+    /*Realizar o cadastro do cliente*/
+
+    printf("Entre com o tema da pesquisa: ");
+    scanf("%s",tcc.tema);
+    
+    while (strcmp(tcc.tema,"FIM")){
+        
+        printf("Entre com o aluno: ");
+        scanf("%d",&tcc.id_aluno);
+        printf("Entre com o orientador: ");
+        scanf("%d",&tcc.id_orientador);
+        printf("Entre com o status: ");
+        scanf("%d",&tcc.status);        
+
+        /*Gravacaoo de dados no arquivo aluno.txt*/
+        fprintf(projeto,"Tema da pesquisa: %s Aluno: %d  Orientador %d Status: %d \r\n",tcc.tema,tcc.id_aluno,tcc.id_orientador,tcc.status);
+
+        /*Realizar um novo cadastro*/
+        printf("\nEntre com o novo tema (se não, digite FIM): ");
+        scanf("%s",tcc.tema);
+    }
+
+    /*Fechar o arquivo*/
+    fclose(projeto);
+
 
 }
 
@@ -174,7 +208,7 @@ int main(){
 
     setlocale(LC_ALL, "");
 
-    TelaLogin();
+    FazerLogin();
 
     MostrarMenu();
 
@@ -182,13 +216,13 @@ int main(){
 
         {
 
-            case 1 : // Gravar Alunos
+            case 1 : // Gravar Clientes
 
                 CadastroAlunos();
 
             break;
 
-            case 2 : // Gravar Professores
+            case 2 : // Gravar Corretores
 
                 CadastroProfessores();
 
