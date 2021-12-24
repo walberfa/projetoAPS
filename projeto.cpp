@@ -4,8 +4,6 @@
 
 int opcao = 0;
 
-
-
 void TelaLogin(){
 
     char login[15] = "wbr42";
@@ -27,9 +25,7 @@ void TelaLogin(){
         }
         else
             printf("\n\nDADOS INVALIDOS!\n\n");    
-    }    
-
-
+    }
 
 }
 
@@ -41,8 +37,8 @@ void MostrarMenu(){
 
     printf("1) - CADASTRO DE ALUNO\n");
     printf("2) - CADASTRO DE PROFESSOR\n");
-    printf("3) - SAIR DO SISTEMA\n\n");    
-    printf("DIGITE A OP«√O DESEJADA: ");
+    printf("3) - CADASTRAR TCC\n\n");    
+    printf("DIGITE A OP√á√ÉO DESEJADA: ");
     scanf("%d", &opcao);
 
     getchar();    
@@ -90,7 +86,7 @@ int main(){
 
             default :
 
-                printf("OpÁ„o Invalida!");
+                printf("Op√ß√£o Invalida!");
 
             break;    
         }
