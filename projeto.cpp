@@ -4,7 +4,7 @@
 
 int opcao = 0;
 
-void TelaLogin(){
+void FazerLogin(){
 
     char login[15] = "wbr42";
     char login1[15];
@@ -57,11 +57,17 @@ void CadastroProfessores(){
 
 }
 
+void CadastroProjeto(){
+
+    printf("\n\nAdicione os dados do TCC\n");
+
+}
+
 int main(){
 
     setlocale(LC_ALL, "");
 
-    TelaLogin();
+    FazerLogin();
 
     MostrarMenu();
 
@@ -81,7 +87,10 @@ int main(){
 
             break;
             
-            case 3 :
+            case 3 : // Gravar TCC
+		
+		CadastroProjetos();
+			
             break;
 
             default :
